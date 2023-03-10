@@ -1,6 +1,7 @@
 using UnityEngine;
-public class MainUnit : MonoBehaviour, ISelecatable
+public class MainUnit : MonoBehaviour, ISelecatable,IAttackable
 {
+    public Transform PivotPoint { get => transform; }
     public float Health => _health;
     public float MaxHealth => _maxHealth;
     public Sprite Icon => _icon;

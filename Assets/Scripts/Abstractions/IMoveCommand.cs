@@ -1,3 +1,5 @@
-﻿public class IMoveCommand : ICommand
-    {
-    }
+﻿using UnityEngine;
+public interface IMoveCommand : ICommand
+{
+    public Vector3 Target { get; }
+}

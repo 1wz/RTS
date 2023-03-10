@@ -1,3 +1,3 @@
-﻿public class IStopCommand:ICommand
+﻿public interface IStopCommand:ICommand
     {
     }
