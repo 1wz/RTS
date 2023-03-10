@@ -1,6 +1,8 @@
 using UnityEngine;
-public class MainBuilding : CommandExecutorBase<IProduceUnitCommand>, ISelecatable
+public class MainBuilding : CommandExecutorBase<IProduceUnitCommand>, ISelecatable,IAttackable
 {
+    public Transform PivotPoint { get => transform; }
+
     public float Health => _health;
     public float MaxHealth => _maxHealth;
     public Sprite Icon => _icon;
