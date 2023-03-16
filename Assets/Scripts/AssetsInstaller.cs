@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Zenject;
 [CreateAssetMenu(fileName = "AssetsInstaller", menuName = "Strategy Game/AssetsInstaller", order = 0)]
@@ -15,5 +16,6 @@ public class AssetsInstaller : ScriptableObjectInstaller<AssetsInstaller>
 .FromInstance(_attackableClicksRMB);
         Container.Bind<IAwaitable<Vector3>>()
         .FromInstance(_groundClicksRMB);
+        Container.Bind<IObservable<ISelecatable>>().FromInstance(_selectables);
     }
 }
