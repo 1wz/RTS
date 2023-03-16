@@ -55,11 +55,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3cbf0a0736422fb49a7341a636fdaead, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
 --- !u!1 &306565966651696334 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
+  m_PrefabInstance: {fileID: 306565966651597420}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &306565966658983692 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 2732fe64dd2799f439fb845921df626b, type: 3}
   m_PrefabInstance: {fileID: 306565966651597420}
   m_PrefabAsset: {fileID: 0}
 --- !u!137 &306565966654810572 stripped
@@ -80,6 +89,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.78277284, z: 1}
   m_Center: {x: 0, y: 0.24515882, z: 0}
+--- !u!195 &-6832648004690585648
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306565966651696334}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!114 &717782284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +174,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc6799508e6b2f4d8ace7bc8358e878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stop: {fileID: 4009133202572624855}
+  _animator: {fileID: 306565966658983692}
+  _stopCommandExecutor: {fileID: 717782286}
 --- !u!114 &717782289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,3 +191,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _icon: {fileID: 21300000, guid: 768abfa1507e086418ef8716315945f3, type: 3}
+--- !u!114 &4009133202572624855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306565966651696334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66736f2f89512b44f8815e74e8b15494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _agent: {fileID: -6832648004690585648}
