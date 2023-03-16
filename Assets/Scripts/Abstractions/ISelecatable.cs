@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface ISelecatable : IHealthHolder
+public interface ISelecatable : IHealthHolder, IIconHolder
 {
     Transform PivotPoint { get; }
-    Sprite Icon { get; }
 }
 
