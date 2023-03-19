@@ -1,5 +1,5 @@
 using UnityEngine;
-public class MainUnit : MonoBehaviour, ISelecatable,IAttackable
+public class MainUnit : MonoBehaviour, ISelecatable,IAttackable,IUnit
 {
     public Transform PivotPoint { get => transform; }
     public float Health => _health;
