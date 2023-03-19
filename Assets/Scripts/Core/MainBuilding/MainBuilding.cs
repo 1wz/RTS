@@ -12,7 +12,18 @@ public class MainBuilding : /*CommandExecutorBase<IProduceUnitCommand>,*/MonoBeh
     private float _health = 1000;
     public Vector3 RallyPoint { get; set; }
 
-
+    public void RecieveDamage(int amount)
+    {
+        if (_health <= 0)
+        {
+            return;
+        }
+        _health -= amount;
+        if (_health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
     /*
     public override void ExecuteSpecificCommand(IProduceUnitCommand command)
     {
