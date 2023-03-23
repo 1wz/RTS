@@ -29,6 +29,8 @@ CommandExecutorBase<IProduceUnitCommand>, IUnitProducer
             var queue = instance.GetComponent<ICommandsQueue>();
             var mainBuilding = GetComponent<MainBuilding>();
             queue.EnqueueCommand(new MoveCommand(mainBuilding.RallyPoint));
+            var factionMember = instance.GetComponent<FactionMember>();
+            factionMember.SetFaction(GetComponent<FactionMember>().FactionId);
 
 
         }
