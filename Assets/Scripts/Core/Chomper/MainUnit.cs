@@ -1,8 +1,11 @@
 using UnityEngine;
-public class MainUnit : MonoBehaviour, ISelecatable,IAttackable,IUnit,IDamageDealer
+public class MainUnit : MonoBehaviour, ISelecatable,IAttackable,IUnit,IDamageDealer, IAutomaticAttacker
 {
     [SerializeField] private Animator _animator;
     [SerializeField] private StopCommandExecutor _stopCommand;
+    public float VisionRadius => _visionRadius;
+    [SerializeField] private float _visionRadius = 8f;
+
 
     public Transform PivotPoint { get => transform; }
     public float Health => _health;
